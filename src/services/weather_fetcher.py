@@ -26,13 +26,33 @@ class WeatherFetcher:
 
         Returns:
             List of forecast entries (raw API data, every 3 hours).
+
+        Raises:
+            ValueError: If city not found or API key invalid.
+            requests.RequestException: For network errors.
         """
         params = {
             "q": place,
             "appid": self.api_key,
             "units": "metric",
         }
-        response = requests.get(self.BASE_URL, params=params, timeout=10)
+
+        try:
+            response = requests.get(self.BASE_URL, params=params, timeout=10)
+        except requests.Timeout:
+            raise requests.RequestException(
+                "The weather service took too long to respond. Try again."
+            )
+        except requests.ConnectionError:
+            raise requests.RequestException(
+                "Could not connect to the weather service. Check your internet."
+            )
+
+        if response.status_code == 404:
+            raise ValueError(f"City '{place}' not found. Check the spelling.")
+        if response.status_code == 401:
+            raise ValueError("Invalid API key. Check your .env file.")
+
         response.raise_for_status()
 
         data = response.json()
