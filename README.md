@@ -7,7 +7,7 @@
 [![Python](https://img.shields.io/badge/Python-3.11+-3776AB?logo=python&logoColor=white)](https://www.python.org/)
 [![Streamlit](https://img.shields.io/badge/Streamlit-1.28+-FF4B4B?logo=streamlit&logoColor=white)](https://streamlit.io/)
 [![Plotly](https://img.shields.io/badge/Plotly-5.17+-3F4F75?logo=plotly&logoColor=white)](https://plotly.com/)
-[![pytest](https://img.shields.io/badge/tests-passing-brightgreen?logo=pytest&logoColor=white)](#-testing)
+[![Tests](https://github.com/Aivalio/weather_dashboard/actions/workflows/tests.yml/badge.svg)](https://github.com/Aivalio/weather_dashboard/actions/workflows/tests.yml) 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 [**🚀 Live Demo**](https://weatherdashboard-5nyksu68u8jgfbekbcxy8m.streamlit.app/) · [**🐛 Report Bug**](https://github.com/Aivalio/weather_dashboard/issues) · [**✨ Request Feature**](https://github.com/Aivalio/weather_dashboard/issues)
