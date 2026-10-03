@@ -75,6 +75,13 @@ The project follows the **Single Responsibility Principle**:
 
 ---
 
+
+## 📸 Screenshots
+
+| Temperature view                                       | Sky conditions                              |
+|--------------------------------------------------------|---------------------------------------------|
+| ![Temperature chart](docs/screenshots/temperature.jpg) | ![Sky conditions](docs/screenshots/sky.jpg) |
+
 ## 📦 Installation
 
 ### Prerequisites
